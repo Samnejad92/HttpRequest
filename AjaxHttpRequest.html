@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AjaxHttpRequest</title>
+</head>
+<body>
+    
+</body>
+<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+<script>
+$.ajax('https://moviesapi.ir/api/v1/movies?page={page}', {
+    type: 'GET',  
+    data: { myData: 'This is my data.' },
+    success: function (data, status, xhr) {
+        console.log(data);
+        // در صورت دریافت پاسخ از سرور اینجا اجرا می‌شود
+    },
+    error: function (jqXhr, textStatus, errorMessage) {
+            // در صورت عدم دریافت پاسخ از سرور اینجا اجرا می‌شود
+    }
+});
+</script>
+</html>
